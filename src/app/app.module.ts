@@ -13,12 +13,14 @@ import {MatFormFieldModule} from '@angular/material/form-field';
 
 
 import { HomeComponent } from './home/home.component';
+import { WomanComponent } from './categories/woman/woman.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    HomeComponent
+    HomeComponent,
+    WomanComponent
   ],
   imports: [
     BrowserModule,

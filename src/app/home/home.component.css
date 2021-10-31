@@ -6,18 +6,36 @@
     transform: scale(1.2);
     cursor: pointer;
 }
-
 .img-cate {
     width: 310px;
-    height: 200px;
+    height: 255px;
 }
-#container-portada {
-    margin-top: 5%;
+.banner {
+    width: 1255px;
+    height: 450px;
 }
-.home-page-content {
-    margin-top: 5%;
+@font-face {
+    font-family: Bodoni;
+    src: url(../../assets/fonts/BodoniXT.ttf) format("truetype");
+    font-weight: normal;
+   font-style: normal;
 }
-.homepage-slider .slides img {
-    width:60%;
-    margin-right: 2%;
+@font-face {
+    font-family: Dream;
+    src: url(../../assets/fonts/dreamorphans.ttf);
+    font-weight: normal;
+    font-style: normal;
+}
+.titles {
+    margin-top: 4%;
+    font-family: 'Bodoni';
+    color: #25253A;
+    font-size: 80px;
+    text-align: center;
+}
+.font-cate {
+    font-family: 'Dream';
+    color: #25253A;
+    text-align: center;
+    font-size: 30px;
 }

@@ -1,6 +1,6 @@
 .nb {
     justify-content: space-between;
-    background-color: rgb(95, 85, 85);
+    background-color: #25253A;
     grid-template-columns: 60% 40%;
 }
 
