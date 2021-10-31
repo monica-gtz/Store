@@ -1,11 +1,9 @@
 .nb {
     justify-content: space-between;
-    background-color: rgb(22, 8, 8);
+    background-color: rgb(95, 85, 85);
     grid-template-columns: 60% 40%;
 }
-header{
-    background-color: brown;
-}
+
 img{
     margin-left: 75px;
     margin-top: 10px;
