@@ -1,0 +1,15 @@
+.nb {
+    justify-content: space-between;
+    background-color: #25253A;
+    grid-template-columns: 60% 40%;
+}
+
+img{
+    margin-left: 75px;
+    margin-top: 10px;
+    width: 150px;
+    height: 70px;
+}
+.spacer {
+    flex: 1 1 auto;
+}

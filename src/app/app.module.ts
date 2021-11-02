@@ -1,5 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { RouterModule } from '@angular/router';
+import { routes } from './app-routing/app-routing-routing.module';
 
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
@@ -14,13 +16,19 @@ import {MatFormFieldModule} from '@angular/material/form-field';
 
 import { HomeComponent } from './home/home.component';
 import { WomanComponent } from './categories/woman/woman.component';
+import { ManComponent } from './categories/man/man.component';
+import { NavbarMenuComponent } from './navbar-menu/navbar-menu.component';
+import { KidsComponent } from './categories/kids/kids.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
-    WomanComponent
+    WomanComponent,
+    ManComponent,
+    NavbarMenuComponent,
+    KidsComponent
   ],
   imports: [
     BrowserModule,
@@ -30,7 +38,8 @@ import { WomanComponent } from './categories/woman/woman.component';
     MatDividerModule,
     MatSelectModule,
     MatButtonModule,
-    MatFormFieldModule
+    MatFormFieldModule,
+    RouterModule.forRoot(routes)
   ],
   providers: [],
   bootstrap: [AppComponent]

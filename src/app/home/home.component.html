@@ -15,17 +15,27 @@
     <h1 class="titles">C A T E G O R I E S</h1>
     <div class="container">
         <div class="row">
-            <div class="col-sm">
-                <img onclick="" class="img-cate" src="../../assets/img/woman.jpg" alt="">
-                <h1 class="font-cate">W o m a n</h1>
+            <div class="col-sm" routerLinkActive="active">
+                <a [routerLink]='["/woman"]'>
+                    <img class="img-cate" src="../../assets/img/woman.jpg" alt="">
+                    <h1 class="font-cate">W o m a n</h1>
+                </a>
             </div>
             <div class="col-sm" id="img-cate">
-                <img class="img-cate" src="../../assets/img/man.jpg" alt="">
-                <h1 class="font-cate">M a n</h1>
+                <a [routerLink]='["/man"]'>
+                    <img class="img-cate" src="../../assets/img/man.jpg" alt="">
+                    <h1 class="font-cate">M a n</h1>
+                </a>
             </div>
             <div class="col-sm" id="img-cate">
-                <img class="img-cate" src="../../assets/img/kids.jpg" alt="">
-                <h1 class="font-cate">K i d s</h1>
+                <a [routerLink]='["/kids"]'>
+                    <img class="img-cate" src="../../assets/img/kids.jpg" alt="">
+                    <h1 class="font-cate">K i d s</h1>
+                </a>
             </div>
         </div>
     </div>
+    <li>
+        <a [routerLink]='["/woman"]'>Encuesta</a>
+
+    </li>

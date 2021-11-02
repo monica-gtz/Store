@@ -1,0 +1,31 @@
+<mat-toolbar class="nb">
+    <mat-toolbar-row class="navbar-one" style="color: white;">
+      <a [routerLink]='["/"]' mat-button>HOME</a>
+      <a mat-button href="/">ABOUT</a>
+      <a mat-button href="/">CONSTACT US</a>
+    </mat-toolbar-row>
+  
+    <mat-toolbar-row class="navbar-dos" style="background-color: rgb(255, 255, 255)">
+      <a>
+        <span>
+          <img src="../assets/img/logo.jpg" alt="">
+        </span>
+      </a>
+      <a mat-button href="">CATEGORIES</a>
+      <div class="spacer"></div>
+  
+      
+      <form class="form">
+        <input class="form-control" type="search" placeholder="SEARCH" aria-label="Search">
+      </form>
+      
+      <button mat-icon-button color="white">
+        <mat-icon aria-hidden="false" aria-label="Example home icon">person</mat-icon>
+      </button>    
+      <button mat-icon-button color="white">
+        <mat-icon aria-hidden="false" aria-label="Example home icon">add_shopping_cart</mat-icon>
+      </button>
+      
+    </mat-toolbar-row>
+  
+  </mat-toolbar>
