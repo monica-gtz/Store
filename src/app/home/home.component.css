@@ -10,9 +10,13 @@
     width: 310px;
     height: 265px;
 }
+.osvi{
+    margin: auto;
+    padding-top: 20px;
+    padding-right: 25px;
+}
 .banner {
-    width: 1255px;
-    height: 450px;
+    width: 100%;    
 }
 @font-face {
     font-family: Bodoni;

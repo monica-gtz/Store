@@ -100,7 +100,8 @@
             "scripts": [
               "./node_modules/jquery/dist/jquery.min.js",
               "./node_modules/@popperjs/core/dist/umd/popper.min.js",
-              "./node_modules/bootstrap/dist/js/bootstrap.min.js"]
+              "./node_modules/bootstrap/dist/js/bootstrap.min.js"
+            ]
           }
         },
         "lint": {
@@ -131,5 +132,8 @@
       }
     }
   },
-  "defaultProject": "Store"
+  "defaultProject": "Store",
+  "cli": {
+    "analytics": "99a8f2a3-c4d1-4d04-aa24-54b4b83ac3a0"
+  }
 }

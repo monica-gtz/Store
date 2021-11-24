@@ -19,6 +19,7 @@ import { WomanComponent } from './categories/woman/woman.component';
 import { ManComponent } from './categories/man/man.component';
 import { NavbarMenuComponent } from './navbar-menu/navbar-menu.component';
 import { KidsComponent } from './categories/kids/kids.component';
+import { AddProductoPopUpComponent } from './categories/woman/add-producto-pop-up/add-producto-pop-up.component';
 
 
 @NgModule({
@@ -28,7 +29,8 @@ import { KidsComponent } from './categories/kids/kids.component';
     WomanComponent,
     ManComponent,
     NavbarMenuComponent,
-    KidsComponent
+    KidsComponent,
+    AddProductoPopUpComponent
   ],
   imports: [
     BrowserModule,

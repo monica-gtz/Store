@@ -13,4 +13,7 @@ export class WomanComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  addProducto() {
+
+  }
 }

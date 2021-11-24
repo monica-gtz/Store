@@ -1,0 +1,34 @@
+<p>add-producto-pop-up works!</p>
+
+<div class="modal-header">
+    <h4 class="modal-title"> REGISTRAR </h4>
+    <button type="button" class="close" aria-label="Close">
+        <span aria-hidden="true">&times;</span>
+    </button>
+</div>
+
+
+<div class="modal-body">
+    <form class="form_reg">
+        <div class="control">
+            <mat-form-field [style.width.px]=450>
+                <mat-label>Nombre del Jefe de Departamento</mat-label>
+                <mat-icon matSuffix> perm_identity </mat-icon>
+                <input matInput type="text" name="nombre" id="nombre" required />
+            </mat-form-field>
+        </div>
+
+        <div class="control">
+            <mat-form-field [style.width.px]=450>
+                <mat-label>Correo Electronico</mat-label>
+                <mat-icon matSuffix> mail_outline </mat-icon>
+                <input matInput type="text" name="correo" id="correo" />
+            </mat-form-field>
+        </div>
+    </form>
+</div>
+<div class="modal-footer">
+    <div class="control">
+        <button mat-raised-button>Registrar</button>
+    </div>
+</div>
