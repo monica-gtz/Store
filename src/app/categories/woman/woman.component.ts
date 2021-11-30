@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
+import { MatDialog } from '@angular/material/dialog';
+import { AddProductoPopUpComponent } from '../woman/add-producto-pop-up/add-producto-pop-up.component'
 
 @Component({
   selector: 'app-woman',
@@ -8,12 +10,13 @@ import { ActivatedRoute } from '@angular/router';
 })
 export class WomanComponent implements OnInit {
 
-  constructor(private route:ActivatedRoute) { }
+  constructor(private route:ActivatedRoute,
+    public dialog: MatDialog) { }
 
   ngOnInit(): void {
   }
 
   addProducto() {
-
+    this.dialog.open(AddProductoPopUpComponent);
   }
 }
