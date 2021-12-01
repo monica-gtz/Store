@@ -38,7 +38,8 @@
             </mat-form-field>
         </p>
         <p for="file">Choose file</p>
-        <input type="file" accept=".jpg,.jpeg,.png" name="imageosvi"><br><br><br><br>
+        <input type="file" accept=".jpg,.jpeg,.png" name="imageosvi"
+            (change)="seleccionarImagen($event.target.files)"><br><br><br><br>
 
         <button mat-raised-button (click)="add()">Add</button><br><br><br>
 

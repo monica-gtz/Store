@@ -18,6 +18,10 @@ export class AgregarProductoComponent implements OnInit {
   public estatus: Estatus[];
   public categorias: Categoria[];
 
+  private file: File;
+  public progress: number = 0;
+  public fileName: string = '';
+
   constructor(private http: HttpClient,
     private productoService: ProductoService,
     public dialog: MatDialog) {
@@ -33,6 +37,11 @@ export class AgregarProductoComponent implements OnInit {
   }
 
   add() {
+    console.log(this.producto);
+    this.subiraArchivo(this.file);
+  }
+
+  nuevoProducto() {
     this.productoService.addNewProducto(this.producto).subscribe(
       response => {
         console.log(response);
@@ -63,5 +72,24 @@ export class AgregarProductoComponent implements OnInit {
     );
   }
 
+  seleccionarImagen(files: FileList) {
+    this.file = files.item(0);
+    console.log(this.file);
+  }
 
+  public subiraArchivo(file: File) {
+    this.progress = 0;
+    const postImageSubscr = this.productoService.cargarImagenProducto(file).subscribe(
+      event => {
+        if (event.type === HttpEventType.UploadProgress)
+          this.progress = Math.round(100 * event.loaded / event.total);
+        else if (event.type === HttpEventType.Response) {
+          let img: Producto = event.body;
+          this.producto.imagen = img.imagen;
+          return this.nuevoProducto();
+        }
+
+      }
+    );
+  }
 }
