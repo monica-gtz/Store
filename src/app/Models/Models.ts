@@ -3,10 +3,17 @@ export class Producto {
   nombre: string = "";
   precio: number;
   imagen: string = "";
-  productoEstatudId: string = "0";
+  estatus: Estatus;
+  categoria: Categoria;
 }
 
 export class Estatus {
   estatusId: string = "0";
   descripcion: string = "";
+}
+
+export class Categoria {
+  categoriaId: string = "0";
+  descripcion: string = "";
+  imagen: string = "";
 }
