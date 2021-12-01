@@ -25,6 +25,8 @@ import { ManComponent } from './categories/man/man.component';
 import { NavbarMenuComponent } from './navbar-menu/navbar-menu.component';
 import { KidsComponent } from './categories/kids/kids.component';
 import { AddProductoPopUpComponent } from './categories/woman/add-producto-pop-up/add-producto-pop-up.component';
+import { ProductosComponent } from './Productos/productos/productos.component';
+import { AgregarProductoComponent } from './Productos/agregar-producto/agregar-producto.component';
 
 
 @NgModule({
@@ -35,7 +37,9 @@ import { AddProductoPopUpComponent } from './categories/woman/add-producto-pop-u
     ManComponent,
     NavbarMenuComponent,
     KidsComponent,
-    AddProductoPopUpComponent
+    AddProductoPopUpComponent,
+    ProductosComponent,
+    AgregarProductoComponent
   ],
   imports: [
     BrowserModule,
