@@ -11,7 +11,13 @@
           <img src="../assets/img/logo.jpg" alt="">
         </span>
       </a>
-      <a mat-button href="">CATEGORIES</a>
+      <a>
+        <button mat-button [matMenuTriggerFor]="menu">CATEGORIAS</button>
+        <mat-menu #menu="matMenu">
+          <button mat-menu-item>Item 1</button>
+          <button mat-menu-item>Item 2</button>
+        </mat-menu>
+      </a>
       <a mat-button [routerLink]='["/productos"]'>PRODUCTOS</a>
       <div class="spacer"></div>
   
