@@ -37,6 +37,7 @@ export class AgregarProductoComponent implements OnInit {
   }
 
   add() {
+    debugger;
     console.log(this.producto);
     this.subiraArchivo(this.file);
   }

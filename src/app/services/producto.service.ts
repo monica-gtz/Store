@@ -10,7 +10,8 @@ export class ProductoService {
 
   private apiUrlProducto: string = "https://localhost:5001/api/Productos";
   private apiUrlProductoImagen: string = "https://localhost:5001/api/Productos/Image";
-  private apiUrlImageServer: string = "https://localhost:5001"
+  private apiUrlImageServer: string = "https://localhost:5001";
+  private apiUrlProductoCateogira: string = "https://localhost:5001/api/ProductoCategorias"
 
   private updateForm = new BehaviorSubject<Producto>({} as any);
   private isLoadingSubject: BehaviorSubject<boolean>;
