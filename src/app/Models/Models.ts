@@ -3,9 +3,20 @@ export class Producto {
   nombre: string = "";
   precio: number;
   imagen: string = "";
-  productocategoriaid: number;
   estatus: Estatus;
   categoria: Categoria;
+}
+
+export class AddProductView{
+  productoId: number;
+  nombre: string = "";
+  precio: number;
+  imagen: string = "";
+  estatusSelected: Estatus;
+  categoriaSelected: Categoria;
+
+  listaEstatus: Estatus[];
+  listaCategoria: Categoria[];
 }
 
 export class Estatus {
@@ -24,3 +35,4 @@ export class ProductoCategoria{
   productoId: string = "0";
   categoriaId: string = "0";
 }
+

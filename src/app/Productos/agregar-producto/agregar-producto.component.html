@@ -19,7 +19,7 @@
         <p>
             <mat-form-field [style.width.px]=400 appearance="outline">
                 <mat-label>Estatus</mat-label>
-                <mat-select [(ngModel)]="producto.estatus">
+                <mat-select [(ngModel)]="producto.listaEstatus">
                     <mat-option>Seleccione una opción</mat-option>
                     <mat-option name="status" *ngFor="let e of estatus" [value]="e">
                         {{e.description}}</mat-option>
@@ -29,10 +29,10 @@
         <p>
             <mat-form-field [style.width.px]=400 appearance="outline">
                 <mat-label>Categoria</mat-label>
-                <mat-select [(ngModel)]="producto.categoria">
+                <mat-select [(ngModel)]="producto.opciones">
                     <mat-option>Seleccione una opción</mat-option>
-                    <mat-option name="categoria" *ngFor="let categoria of categorias" [value]="categoria">
-                        {{categoria.descripcion}}</mat-option>
+                    <mat-option name="categoria" *ngFor="let opcion of opciones" [value]="opcion">
+                        {{opcion.descripcion}}</mat-option>
                 </mat-select>
             </mat-form-field>
         </p>

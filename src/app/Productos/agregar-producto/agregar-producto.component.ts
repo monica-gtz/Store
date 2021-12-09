@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { HttpClient, HttpClientModule, HttpEventType } from '@angular/common/http';
-import { Estatus, Producto, Categoria } from '../../Models/Models';
+import { Estatus, Producto, Categoria, AddProductView } from '../../Models/Models';
 import { ProductoService } from '../../services/producto.service';
 import { MatDialog } from '@angular/material/dialog';
 
@@ -11,10 +11,8 @@ import { MatDialog } from '@angular/material/dialog';
 })
 export class AgregarProductoComponent implements OnInit {
 
-  private apiUrlEstatus: string = "https://localhost:5001/api/Estatus";
-  private apiUrlCategorias: string = "https://localhost:5001/api/Categorias";
-
-  public producto: Producto;
+  public producto: AddProductView;
+  public opciones: AddProductView[];
   public estatus: Estatus[];
   public categorias: Categoria[];
 
@@ -31,19 +29,16 @@ export class AgregarProductoComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    this.producto = new Producto();
-    this.producto.estatus = new Estatus();
-    this.producto.categoria = new Categoria();
+    this.producto = new AddProductView();
   }
 
   add() {
-    debugger;
     console.log(this.producto);
     this.subiraArchivo(this.file);
   }
 
   nuevoProducto() {
-    this.productoService.addNewProducto(this.producto).subscribe(
+    this.productoService.addNewProduct(this.producto).subscribe(
       response => {
         console.log(response);
         this.dialog.closeAll();
@@ -56,19 +51,19 @@ export class AgregarProductoComponent implements OnInit {
   }
 
   obtenerEstatus() {
-    this.http.get<Estatus[]>(this.apiUrlEstatus).subscribe(
+    this.productoService.listaOpciones().subscribe(
       result => {
-        this.estatus = result;
-        console.log(this.estatus);
+        this.opciones = result;
+        console.log(this.opciones);
       }, error => console.error(error)
     );
   }
 
   obtenerCategorias() {
-    this.http.get<Categoria[]>(this.apiUrlCategorias).subscribe(
+    this.productoService.listaOpciones().subscribe(
       result => {
-        this.categorias = result;
-        console.log(this.categorias);
+        this.opciones = result;
+        console.log(this.opciones);
       }, error => console.error(error)
     );
   }
@@ -85,7 +80,7 @@ export class AgregarProductoComponent implements OnInit {
         if (event.type === HttpEventType.UploadProgress)
           this.progress = Math.round(100 * event.loaded / event.total);
         else if (event.type === HttpEventType.Response) {
-          let img: Producto = event.body;
+          let img: AddProductView = event.body;
           this.producto.imagen = img.imagen;
           return this.nuevoProducto();
         }
