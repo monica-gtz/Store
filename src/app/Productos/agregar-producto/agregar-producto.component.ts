@@ -24,8 +24,7 @@ export class AgregarProductoComponent implements OnInit {
     private productoService: ProductoService,
     public dialog: MatDialog) {
     this.http = http;
-    this.obtenerEstatus();
-    this.obtenerCategorias();
+    this.obtenerListaOpciones();
   }
 
   ngOnInit(): void {
@@ -50,16 +49,7 @@ export class AgregarProductoComponent implements OnInit {
     );
   }
 
-  obtenerEstatus() {
-    this.productoService.listaOpciones().subscribe(
-      result => {
-        this.opciones = result;
-        console.log(this.opciones);
-      }, error => console.error(error)
-    );
-  }
-
-  obtenerCategorias() {
+  obtenerListaOpciones(){
     this.productoService.listaOpciones().subscribe(
       result => {
         this.opciones = result;
