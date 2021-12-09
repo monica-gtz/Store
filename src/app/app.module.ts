@@ -28,6 +28,7 @@ import { KidsComponent } from './categories/kids/kids.component';
 import { AddProductoPopUpComponent } from './categories/woman/add-producto-pop-up/add-producto-pop-up.component';
 import { ProductosComponent } from './Productos/productos/productos.component';
 import { AgregarProductoComponent } from './Productos/agregar-producto/agregar-producto.component';
+import { AgregarCategoriaComponent } from './categories/agregar-categoria/agregar-categoria.component';
 
 
 @NgModule({
@@ -40,7 +41,8 @@ import { AgregarProductoComponent } from './Productos/agregar-producto/agregar-p
     KidsComponent,
     AddProductoPopUpComponent,
     ProductosComponent,
-    AgregarProductoComponent
+    AgregarProductoComponent,
+    AgregarCategoriaComponent
   ],
   imports: [
     BrowserModule,
