@@ -12,7 +12,7 @@ import { MatDialog } from '@angular/material/dialog';
 export class AgregarProductoComponent implements OnInit {
 
   public producto: AddProductView;
-  public opciones: AddProductView[];
+ 
   public estatus: Estatus[];
   public categorias: Categoria[];
 
@@ -52,8 +52,8 @@ export class AgregarProductoComponent implements OnInit {
   obtenerListaOpciones(){
     this.productoService.listaOpciones().subscribe(
       result => {
-        this.opciones = result;
-        console.log(this.opciones);
+        this.producto = result;
+        console.log(this.producto);
       }, error => console.error(error)
     );
   }

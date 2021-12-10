@@ -21,12 +21,12 @@ export class ProductoService {
 
   constructor(private http: HttpClient) { }
 
-  getAllProductos() {
-    return this.http.get<Producto[]>(this.apiUrlProducto);
+  getAllProducts() {
+    return this.http.get<AddProductView[]>(this.apiUrlProducto);
   }
 
   listaOpciones(){
-    return this.http.get<AddProductView[]>(this.apiUrlListaOpciones);
+    return this.http.get<AddProductView>(this.apiUrlListaOpciones);
   }
 
   addNewProduct(newProduct: AddProductView){
