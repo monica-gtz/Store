@@ -17,6 +17,7 @@ import { MatDialogModule } from '@angular/material/dialog';
 import { MatInputModule } from '@angular/material/input';
 import { FormsModule } from '@angular/forms';
 import {MatMenuModule} from '@angular/material/menu';
+import { MatTableModule } from '@angular/material/table';
 
 
 
@@ -29,6 +30,7 @@ import { AddProductoPopUpComponent } from './categories/woman/add-producto-pop-u
 import { ProductosComponent } from './Productos/productos/productos.component';
 import { AgregarProductoComponent } from './Productos/agregar-producto/agregar-producto.component';
 import { AgregarCategoriaComponent } from './categories/agregar-categoria/agregar-categoria.component';
+import { CategoriasComponent } from './categories/categorias/categorias.component';
 
 
 @NgModule({
@@ -42,7 +44,8 @@ import { AgregarCategoriaComponent } from './categories/agregar-categoria/agrega
     AddProductoPopUpComponent,
     ProductosComponent,
     AgregarProductoComponent,
-    AgregarCategoriaComponent
+    AgregarCategoriaComponent,
+    CategoriasComponent
   ],
   imports: [
     BrowserModule,
@@ -58,6 +61,7 @@ import { AgregarCategoriaComponent } from './categories/agregar-categoria/agrega
     MatInputModule,
     FormsModule,
     MatMenuModule,
+    MatTableModule,
     RouterModule.forRoot(routes)
   ],
   providers: [],

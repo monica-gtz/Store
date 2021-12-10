@@ -19,9 +19,19 @@ export class AddProductView{
   listaCategoria: Categoria[];
 }
 
+export class AddCategorieView{
+  categoriaId: number;
+  descripcion: string = "";
+  imagen : string = "";
+  
+  estatusSelected: Estatus;
+
+  listaEstatus: Estatus[];
+}
+
 export class Estatus {
   estatusId: string = "0";
-  descripcion: string = "";
+  description: string = "";
 }
 
 export class Categoria {
@@ -30,9 +40,5 @@ export class Categoria {
   imagen: string = "";
 }
 
-export class ProductoCategoria{
-  productoCategoriaId: string = "0";
-  productoId: string = "0";
-  categoriaId: string = "0";
-}
+
 

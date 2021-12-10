@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { HttpClient, HttpClientModule, HttpEventType } from '@angular/common/http';
-import { Estatus, Producto, Categoria, AddProductView } from '../../Models/Models';
+import { HttpClient, HttpEventType } from '@angular/common/http';
+import { Estatus, Categoria, AddProductView } from '../../Models/Models';
 import { ProductoService } from '../../services/producto.service';
 import { MatDialog } from '@angular/material/dialog';
 

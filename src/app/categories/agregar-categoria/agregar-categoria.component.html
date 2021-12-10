@@ -1,1 +1,36 @@
-<p>agregar-categoria works!</p>
+
+<h1 mat-dialog-title>Agregar nueva categoria</h1>
+<mat-divider></mat-divider><br>
+<div mat-dialog-content class="dialog-content">
+    <div class="osvi">
+        <!-- [ngModel] me sirve para guardar datos de una propiedad de los modelos -->
+
+        <p>
+            <mat-form-field [style.width.px]=400 appearance="legacy" appearance="outline">
+                <mat-label>Nombre de la categoria</mat-label>
+                <input matInput type="text" name="nameosvi" [(ngModel)]="categoria.descripcion">
+            </mat-form-field>
+        </p>
+        <p>
+            <mat-form-field [style.width.px]=400 appearance="outline">
+                <mat-label>Estatus</mat-label>
+                <mat-select [(ngModel)]="categoria.estatusSelected">
+                    <mat-option>Seleccione una opción</mat-option>
+                    <mat-option name="status" *ngFor="let est of categoria.listaEstatus" [value]="est">
+                        {{est.description}}</mat-option>
+                </mat-select>
+            </mat-form-field>
+        </p>
+        
+        <p for="file">Seleccionar imagen</p>
+        <input type="file" accept=".jpg,.jpeg,.png" name="imageosvi"
+            (change)="seleccionarImagen($event.target.files)"><br><br><br><br>
+
+        <button mat-raised-button (click)="add()">Agregar</button><br><br><br>
+
+    </div>
+</div>
+<mat-divider></mat-divider>
+<div mat-dialog-actions class="dialog-button">
+    <button mat-raised-button mat-dialog-close>Close</button>
+</div>
