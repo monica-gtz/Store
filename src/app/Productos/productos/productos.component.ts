@@ -33,13 +33,13 @@ export class ProductosComponent implements OnInit {
     popupRef.afterClosed().subscribe(result => this.productoService.getAllProducts());
   }
 
-  postProcess(listProductos: AddProductView[]): void {
-    console.log(listProductos);
-    listProductos.forEach(element => {
+  postProcess(listaProductos: AddProductView[]): void {
+    console.log(listaProductos);
+    listaProductos.forEach(element => {
       element.imagen = this.productoService.getImageUrl(element.imagen);
     });
-    this.listaProductos = listProductos;
-    this.dataSource = listProductos;
+    this.listaProductos = listaProductos;
+    this.dataSource = listaProductos;
   }
 
 }

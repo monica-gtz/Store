@@ -1,3 +1,35 @@
 <div class="container">
     <button mat-raised-button (click)="openDialog()">Agregar nueva categoria</button>
+
+    <h1 class="title">Lista de categorias</h1>
+      
+
+    <table mat-table [dataSource]="dataSource"  class="mat-elevation-z8">
+
+        <!--- Note that these columns can be defined in any order.
+        The actual rendered columns are set as a property on the row definition" -->
+        <!-- Position Column -->
+        <ng-container class="id" matColumnDef="categoriaId">
+            <th mat-header-cell *matHeaderCellDef> Id </th>
+            <td mat-cell *matCellDef="let element">{{element.categoriaId}}</td>
+        </ng-container>
+
+        <!-- Name Column -->
+        <ng-container matColumnDef="descripcion">
+            <th mat-header-cell *matHeaderCellDef> Nombre </th>
+            <td mat-cell *matCellDef="let element">{{element.descripcion}}</td>
+        </ng-container>
+
+        <ng-container matColumnDef="imagen">
+            <th mat-header-cell *matHeaderCellDef> Imagen </th>
+            <td mat-cell *matCellDef="let element">
+                <div class="card col-sm-12 imagen">
+                    <img class="img-thumbnail" [src]="element.imagen" />
+                </div>
+            </td>
+        </ng-container>
+
+        <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+        <tr class="line" mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+    </table>
 </div>

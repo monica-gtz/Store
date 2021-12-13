@@ -23,6 +23,7 @@ export class AgregarCategoriaComponent implements OnInit {
     private categoriaService: CategoriaService,
     public dialog: MatDialog) {
       this.http = http;
+      this.obtenerListaOpciones();
     }
 
   ngOnInit(): void {
@@ -33,6 +34,7 @@ export class AgregarCategoriaComponent implements OnInit {
     console.log(this.categoria);
     this.subiraArchivo(this.file);
   }
+  
 
   nuevaCategoria() {
     this.categoriaService.addNewCategorie(this.categoria).subscribe(

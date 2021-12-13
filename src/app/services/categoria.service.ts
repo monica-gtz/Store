@@ -16,7 +16,7 @@ export class CategoriaService {
 
   constructor(private http: HttpClient) { }
 
-  getAllCategorie() {
+  getAllCategories() {
     return this.http.get<AddCategorieView[]>(this.apiUrlCategorias);
   }
 
