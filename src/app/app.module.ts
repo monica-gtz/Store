@@ -31,6 +31,7 @@ import { ProductosComponent } from './Productos/productos/productos.component';
 import { AgregarProductoComponent } from './Productos/agregar-producto/agregar-producto.component';
 import { AgregarCategoriaComponent } from './categories/agregar-categoria/agregar-categoria.component';
 import { CategoriasComponent } from './categories/categorias/categorias.component';
+import { EditarProductoComponent } from './productos/editar-producto/editar-producto.component';
 
 
 @NgModule({
@@ -45,7 +46,8 @@ import { CategoriasComponent } from './categories/categorias/categorias.componen
     ProductosComponent,
     AgregarProductoComponent,
     AgregarCategoriaComponent,
-    CategoriasComponent
+    CategoriasComponent,
+    EditarProductoComponent
   ],
   imports: [
     BrowserModule,
@@ -65,6 +67,9 @@ import { CategoriasComponent } from './categories/categorias/categorias.componen
     RouterModule.forRoot(routes)
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
+  entryComponents: [
+    EditarProductoComponent
+  ]
 })
 export class AppModule { }

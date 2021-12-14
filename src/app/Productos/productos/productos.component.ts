@@ -4,6 +4,7 @@ import { MatDialog } from '@angular/material/dialog';
 import { AgregarProductoComponent } from '../agregar-producto/agregar-producto.component';
 import { ProductoService } from '../../services/producto.service';
 import { AddProductView } from '../../Models/Models';
+import { EditarProductoComponent } from '../editar-producto/editar-producto.component';
 
 
 @Component({
@@ -42,4 +43,7 @@ export class ProductosComponent implements OnInit {
     this.dataSource = listaProductos;
   }
 
+  mostrarDetalles(){
+    let popEditar = this.dialog.open(EditarProductoComponent);
+  }
 }
