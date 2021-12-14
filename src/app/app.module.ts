@@ -26,9 +26,8 @@ import { WomanComponent } from './categories/woman/woman.component';
 import { ManComponent } from './categories/man/man.component';
 import { NavbarMenuComponent } from './navbar-menu/navbar-menu.component';
 import { KidsComponent } from './categories/kids/kids.component';
-import { AddProductoPopUpComponent } from './categories/woman/add-producto-pop-up/add-producto-pop-up.component';
-import { ProductosComponent } from './Productos/productos/productos.component';
-import { AgregarProductoComponent } from './Productos/agregar-producto/agregar-producto.component';
+import { ProductosComponent } from './productos/listaProductos/productos.component';
+import { AgregarProductoComponent } from './productos/agregar-producto/agregar-producto.component';
 import { AgregarCategoriaComponent } from './categories/agregar-categoria/agregar-categoria.component';
 import { CategoriasComponent } from './categories/categorias/categorias.component';
 import { EditarProductoComponent } from './productos/editar-producto/editar-producto.component';
@@ -42,7 +41,6 @@ import { EditarProductoComponent } from './productos/editar-producto/editar-prod
     ManComponent,
     NavbarMenuComponent,
     KidsComponent,
-    AddProductoPopUpComponent,
     ProductosComponent,
     AgregarProductoComponent,
     AgregarCategoriaComponent,
@@ -67,9 +65,6 @@ import { EditarProductoComponent } from './productos/editar-producto/editar-prod
     RouterModule.forRoot(routes)
   ],
   providers: [],
-  bootstrap: [AppComponent],
-  entryComponents: [
-    EditarProductoComponent
-  ]
+  bootstrap: [AppComponent]  
 })
 export class AppModule { }

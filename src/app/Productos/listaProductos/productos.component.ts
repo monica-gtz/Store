@@ -15,6 +15,7 @@ import { EditarProductoComponent } from '../editar-producto/editar-producto.comp
 export class ProductosComponent implements OnInit {
 
   public listaProductos: AddProductView[] = [];
+  actualizar : AddProductView;
   dataSource = this.listaProductos;
 
   constructor(private route: ActivatedRoute,
@@ -43,7 +44,9 @@ export class ProductosComponent implements OnInit {
     this.dataSource = listaProductos;
   }
 
-  mostrarDetalles(){
-    let popEditar = this.dialog.open(EditarProductoComponent);
+  mostrarDetalles(actualizar: AddProductView):void{
+    debugger;
+    console.log(actualizar);
+    const openDialogUpdate = this.dialog.open(EditarProductoComponent);
   }
 }

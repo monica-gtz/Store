@@ -4,7 +4,7 @@ import { KidsComponent } from '../categories/kids/kids.component';
 import { ManComponent } from '../categories/man/man.component';
 import { WomanComponent } from '../categories/woman/woman.component';
 import { HomeComponent } from '../home/home.component';
-import { ProductosComponent } from '../Productos/productos/productos.component';
+import { ProductosComponent } from '../productos/listaProductos/productos.component';
 import { CategoriasComponent } from '../categories/categorias/categorias.component';
 
 

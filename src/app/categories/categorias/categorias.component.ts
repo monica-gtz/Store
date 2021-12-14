@@ -3,7 +3,6 @@ import { MatDialog } from '@angular/material/dialog';
 import { AgregarCategoriaComponent } from '../agregar-categoria/agregar-categoria.component';
 import { CategoriaService } from '../../services/categoria.service';
 import { AddCategorieView } from 'src/app/Models/Models';
-import { TouchSequence } from 'selenium-webdriver';
 
 
 @Component({
