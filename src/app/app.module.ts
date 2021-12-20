@@ -18,6 +18,7 @@ import { MatInputModule } from '@angular/material/input';
 import { FormsModule } from '@angular/forms';
 import {MatMenuModule} from '@angular/material/menu';
 import { MatTableModule } from '@angular/material/table';
+import { AngularDualListBoxModule } from 'angular-dual-listbox';
 
 
 
@@ -31,6 +32,9 @@ import { AgregarProductoComponent } from './productos/agregar-producto/agregar-p
 import { AgregarCategoriaComponent } from './categories/agregar-categoria/agregar-categoria.component';
 import { CategoriasComponent } from './categories/categorias/categorias.component';
 import { EditarProductoComponent } from './productos/editar-producto/editar-producto.component';
+import { OpcionesCategoriaComponent } from './productos/agregar-producto/opciones-categoria/opciones-categoria.component';
+import { BdDualSelectListComponent } from './bd-dual-select-list/bd-dual-select-list.component';
+import { BdSelectListComponent } from './bd-dual-select-list/bd-select-list/bd-select-list.component';
 
 
 @NgModule({
@@ -45,7 +49,10 @@ import { EditarProductoComponent } from './productos/editar-producto/editar-prod
     AgregarProductoComponent,
     AgregarCategoriaComponent,
     CategoriasComponent,
-    EditarProductoComponent
+    EditarProductoComponent,
+    OpcionesCategoriaComponent,
+    BdDualSelectListComponent,
+    BdSelectListComponent
   ],
   imports: [
     BrowserModule,
@@ -62,6 +69,7 @@ import { EditarProductoComponent } from './productos/editar-producto/editar-prod
     FormsModule,
     MatMenuModule,
     MatTableModule,
+    AngularDualListBoxModule,
     RouterModule.forRoot(routes)
   ],
   providers: [],

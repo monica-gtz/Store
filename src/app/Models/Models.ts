@@ -13,7 +13,7 @@ export class AddProductView{
   precio: number;
   imagen: string = "";
   estatusSelected: Estatus;
-  categoriaSelected: Categoria;
+  categoriaSelected: Categoria[];
 
   listaEstatus: Estatus[];
   listaCategoria: Categoria[];

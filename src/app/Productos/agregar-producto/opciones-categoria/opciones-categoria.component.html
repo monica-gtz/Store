@@ -1,0 +1,19 @@
+
+<h1 mat-dialog-title>Opciones de categoria</h1>
+<mat-divider></mat-divider><br>
+<div mat-dialog-content class="dialog-content">
+    <div class="osvi">
+        <!-- [ngModel] me sirve para guardar datos de una propiedad de los modelos -->
+
+        <div class="container" [style.width.px]=600>
+            <dual-list [source]="source" [(destination)]="target" height="150px"></dual-list>
+        </div><br><br><br>
+
+        <button mat-raised-button>Add</button><br><br><br>
+
+    </div>
+</div>
+<mat-divider></mat-divider>
+<div mat-dialog-actions class="dialog-button">
+    <button mat-raised-button mat-dialog-close>Close</button>
+</div>

@@ -1,0 +1,30 @@
+<div class="row infostratus-dual-list-container">
+    <div class="col-sm-6">
+        <label>{{this.availableOpts.moveOptions.headerTitle}}</label>
+        <bd-select-list [items]="availableItems"
+                        [options]="availableOpts"
+                        [moveAllEnabled]="availableMoveAllEnabled"
+                        [moveOneDisabled]="selectedLimitReached"
+                        [disabledTitleText]="disabledTitleText"
+                        [containerHeight]="containerHeight"
+                        [disabled]="disabled"
+                        (onMoveAll)="onAllItemsMove_AvailableList($event)"
+                        (onItemMove)="onItemMove_AvailableList($event)"
+                        (onFilterChanged)="onFilterChanged_AvailableList($event)">
+        </bd-select-list>
+    </div>
+    <div class="col-sm-6">
+        <label>{{this.selectedOpts.moveOptions.headerTitle }}</label>
+        
+
+        <bd-select-list [items]="selectedItems"
+                        [options]="selectedOpts"
+                        [moveAllEnabled]="selectedMoveAllEnabled"
+                        [containerHeight]="containerHeight"
+                        [disabled]="disabled"
+                        (onMoveAll)="onAllItemsMove_SelectedList($event)"
+                        (onItemMove)="onItemMove_SelectedList($event)"
+                        (onFilterChanged)="onFilterChanged_SelectedList($event)">
+        </bd-select-list>
+    </div>
+</div>

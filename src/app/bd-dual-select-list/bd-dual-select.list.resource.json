@@ -1,0 +1,9 @@
+{
+    "keys": [
+        "Common_AddAllItems",
+        "Common_AvailableItems",
+        "Common_RemoveAllItems",
+        "Common_SelectedItems",
+        "Common_EnterFilterTextHere"
+    ]
+}

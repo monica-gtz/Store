@@ -1,0 +1,63 @@
+<div class="bd-select-list">
+    <div class="input-group">
+      <!-- TODO: Translate -->
+      <input type="text" class="form-control" [title]="options.filterOptions.placeholderText || 'Enter filter text here'" [placeholder]="options.filterOptions.placeholderText || 'Enter filter text here'"
+        [readonly]="!filterEnabled" [(ngModel)]="filterText" (ngModelChange)="onFilterInputChanged()" />
+    </div>
+    <span class="input-group-btn">
+      <button mat-raised-button color="primary" class="btn btn-primary osvi formLink"
+            [disabled]="disabled || !moveAllEnabled || moveOneDisabled"
+            [innerHtml]="options.moveOptions.moveAllButtonTemplate"
+            [title]="options.moveOptions.moveAllButtonTitleText"
+            (click)="onMoveAllClicked()"
+      ></button>    
+    </span>
+    <div class="infostratus-select-list-container noselect" [style.height.px]="150">
+      <ul class="list-unstyled bd-select-list-group-list">
+        <li class="bd-select-list-group" *ngFor="let groupItem of displayedItems" [class.bg-info]="groupItem.isActive">
+          <ng-container *ngIf="groupItem.isGroup">
+            <div class="bd-select-list-group-header-row">
+              <div class="bd-select-list-collapse-group-region" (click)="groupItem.showSubItems = !groupItem.showSubItems">
+                <div class="bd-select-list-collapse-group-button">
+                  <span *ngIf="groupItem.subItems?.length > 0" [class.bdicon-chevron-down]="groupItem.showSubItems" [class.bdicon-chevron-right]="!groupItem.showSubItems"></span>
+                </div>
+                <span class="bd-select-list-group-header-text" [innerHtml]="groupItem.displayName"></span>
+              </div>
+              <div class="list-move-btn" [class.no-click]="moveOneDisabled" (click)="onMoveItem(groupItem)" title="{{disabledTitle}}">
+                <span [ngClass]="options.moveOptions.moveItemButtonClasses"></span>
+              </div>
+            </div>
+            <ul class="list-unstyled bd-select-list-item-list" *ngIf="groupItem.showSubItems && groupItem.subItems?.length > 0">
+              <li class="bd-select-list-item active" *ngFor="let valueItem of groupItem.subItems" [class.bg-info]="valueItem.isActive">
+                <div class="bd-select-list-item-text"
+                    title="{{disabledTitle}}"
+                    [class.no-click]="disabled || moveOneDisabled"
+                    [innerHtml]="valueItem.displayName"
+                    (click)="onMoveItem(valueItem, groupItem)"></div>
+                <span class="list-move-btn"
+                      title="{{disabledTitle}}"
+                      [class.no-click]="disabled || moveOneDisabled"
+                      [ngClass]="options.moveOptions.moveItemButtonClasses"
+                      (click)="onMoveItem(valueItem, groupItem)"></span>
+              </li>
+            </ul>
+          </ng-container>
+          <ng-container *ngIf="!groupItem.isGroup">
+            <div class="bd-select-list-item active">
+              <div class="bd-select-list-item-text"
+                  title="{{disabledTitle}}"
+                  [class.no-click]="disabled || moveOneDisabled"
+                  [innerHtml]="groupItem.displayName"
+                  (click)="onMoveItem(groupItem)"></div>
+              <span class="list-move-btn"
+                    title="{{disabledTitle}}"
+                    [class.no-click]="disabled || moveOneDisabled"
+                    [ngClass]="options.moveOptions.moveItemButtonClasses"
+                    (click)="onMoveItem(groupItem)"></span>
+            </div>
+          </ng-container>
+        </li>
+      </ul>
+    </div>
+  </div>
+  

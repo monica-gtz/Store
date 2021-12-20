@@ -3,6 +3,7 @@ import { HttpClient, HttpEventType } from '@angular/common/http';
 import { Estatus, Categoria, AddProductView } from '../../Models/Models';
 import { ProductoService } from '../../services/producto.service';
 import { MatDialog } from '@angular/material/dialog';
+import { OpcionesCategoriaComponent } from './opciones-categoria/opciones-categoria.component';
 
 @Component({
   selector: 'app-agregar-producto',
@@ -12,7 +13,7 @@ import { MatDialog } from '@angular/material/dialog';
 export class AgregarProductoComponent implements OnInit {
 
   public producto: AddProductView;
- 
+
   public estatus: Estatus[];
   public categorias: Categoria[];
 
@@ -49,13 +50,17 @@ export class AgregarProductoComponent implements OnInit {
     );
   }
 
-  obtenerListaOpciones(){
+  obtenerListaOpciones() {
     this.productoService.listaOpciones().subscribe(
       result => {
         this.producto = result;
         console.log(this.producto);
       }, error => console.error(error)
     );
+  }
+
+  opcionesCategoria() {
+    this.dialog.open(OpcionesCategoriaComponent);
   }
 
   seleccionarImagen(files: FileList) {

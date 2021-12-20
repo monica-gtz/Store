@@ -27,6 +27,7 @@
             </mat-form-field>
         </p>
         <p>
+            <button mat-raised-button (click)="opcionesCategoria()">Seleccionar categorias</button>
             <mat-form-field [style.width.px]=400 appearance="outline">
                 <mat-label>Categoria</mat-label>
                 <mat-select [(ngModel)]="producto.categoriaSelected">
