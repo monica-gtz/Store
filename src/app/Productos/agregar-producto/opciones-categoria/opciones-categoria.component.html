@@ -1,4 +1,3 @@
-
 <h1 mat-dialog-title>Opciones de categoria</h1>
 <mat-divider></mat-divider><br>
 <div mat-dialog-content class="dialog-content">
@@ -6,6 +5,9 @@
         <!-- [ngModel] me sirve para guardar datos de una propiedad de los modelos -->
 
         <div class="container" [style.width.px]=600>
+            <dual-list [source]="source" [display]="display" [filter]="filter" [(destination)]="confirmed"
+                height="265px" [format]="format" [disabled]="disabled"></dual-list>
+                
             <dual-list [source]="source" [(destination)]="target" height="150px"></dual-list>
         </div><br><br><br>
 
